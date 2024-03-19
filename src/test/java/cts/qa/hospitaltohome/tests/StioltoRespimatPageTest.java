@@ -22,7 +22,6 @@ public class StioltoRespimatPageTest extends BaseTest {
 	}
 	
 	
-	
 	@Description("Stiolto page url test")
 	@Severity(SeverityLevel.BLOCKER)
 	@Test
