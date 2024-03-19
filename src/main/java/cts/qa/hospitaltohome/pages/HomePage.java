@@ -68,7 +68,7 @@ public class HomePage {
 		return new StioltoRespimatPage(driver);
 	}
 	
-	@Step("Navigating to Stiolto Respimat Page")
+	@Step("Navigating to Spiriva Respimat Page")
 	public SpirivaRespimatPage navigateToSpirivaRespimatPage()
 	{
 		eleUtil.waitForVisibilityOfElement(spirivacard, Constants.MEDIUM_DEFAULT_WAIT).click();

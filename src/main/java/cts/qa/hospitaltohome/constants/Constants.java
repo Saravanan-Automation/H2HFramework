@@ -25,7 +25,7 @@ public class Constants {
 	public static final List<String> ACCOUNT_PAGE_HEADER_LIST =
 			Arrays.asList("My Account", "My Orders", "My Affiliate Account", "Newsletter");
 	
-	public static final String USER_REGISTER_SUCCESS_MESSG = "Your Account Has Been Created!";
+	public static final String PATIENT_REGISTER_SUCCESS_MESSG = "THANK YOU";
 	
 	public static final String REGISTER_DATA_SHEET_NAME = "register";
 	public static final String PRODUCT_DATA_SHEET_NAME = "product";

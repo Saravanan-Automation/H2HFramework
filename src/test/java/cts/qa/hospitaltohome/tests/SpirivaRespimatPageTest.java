@@ -2,6 +2,7 @@ package cts.qa.hospitaltohome.tests;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import cts.qa.hospitaltohome.constants.Constants;
@@ -43,5 +44,33 @@ public class SpirivaRespimatPageTest extends BaseTest {
 	{
 		Assert.assertEquals(spirivaPage.getHomePageTitle(), Constants.SPIRIVA_PAGE_TITLE);
 	}
+	
+	public String getRandomEmailID()
+	{
+		return "testautomation" + System.currentTimeMillis() + "@opencart.com";
+	  //return "testautomation" + UUID.randomUUID() + "@opencart.com";
+	}
+	
+	
+	@DataProvider
+	public Object[][] getPatientRegData()
+	{
+		return new Object[][]
+		{
+			{"Udhya", "Kumar", "9943980764", "45kljdls", "4", "Chennai", "tn", "56272"},
+			{"Velan", "Raj", "9043980764", "11euwhfoike", "7", "Bangalore", "karnataka", "89383"},
+			{"Kapoor", "Khan", "8543980764", "add123", "9", "Hyderabad", "AP", "39383"},
+		};
+	}
+	
+	@Test(dataProvider = "getPatientRegData")
+	public void patientRegTest(String firstName, String lastName, String phoneNumber, String address, String floor, String city, String state, String zipcode)
+	{
+		boolean isRegDone = spirivaPage.patientRegisteration(firstName, lastName, phoneNumber, getRandomEmailID(), address, floor, city, state, zipcode);
+		
+		Assert.assertTrue(isRegDone);
+	}
 
 }
+
+

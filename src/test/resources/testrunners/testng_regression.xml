@@ -4,30 +4,31 @@
 <suite name="Hospital to Home Regression Suite" thread-count="4"
 	parallel="tests" verbose="4">
 	
-	<listeners>
+	<!-- <listeners>
 			<listener class-name="cts.qa.hospitaltohome.listeners.ExtentReportListener" />
 			<listener class-name="cts.qa.hospitaltohome.listeners.TestAllureListener" />
-			<!-- <listener class-name="cts.qa.hospitaltohome.listeners.AnnotationTransformer" /> -->
+			 <listener class-name="cts.qa.hospitaltohome.listeners.AnnotationTransformer" /> 
 	</listeners> 
 
 	<test name="Home Page Test">
-		<parameter name="browser" value="firefox"></parameter>
+		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="cts.qa.hospitaltohome.tests.HomePageTest" />
 		</classes>
 	</test>
 	
     <test name="Spiriva Respimat Page Test">
-		<parameter name="browser" value="edge"></parameter>
+		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="cts.qa.hospitaltohome.tests.SpirivaRespimatPageTest" />
 		</classes>
-	</test>
+	</test> -->
+
 	
 	<test name="Stiolto Respimat Page Test">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="cts.qa.hospitaltohome.tests.StioltoRespimatPageTest" />
+			<class name="cts.qa.hospitaltohome.tests.SpirivaRespimatPageTest" />
 		</classes>
 	</test>
 	
