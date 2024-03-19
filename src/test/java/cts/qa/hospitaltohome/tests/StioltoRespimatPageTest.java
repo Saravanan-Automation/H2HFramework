@@ -47,6 +47,7 @@ public class StioltoRespimatPageTest extends BaseTest {
 		Assert.assertEquals(stiltoPage.getHomePageTitle(), Constants.STIOLTO_PAGE_TITLE);
 	}
 	
+	
 	public String getRandomEmailID()
 	{
 		return "testautomation" + System.currentTimeMillis() + "@opencart.com";
