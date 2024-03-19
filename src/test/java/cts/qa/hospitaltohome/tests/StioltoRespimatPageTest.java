@@ -65,6 +65,7 @@ public class StioltoRespimatPageTest extends BaseTest {
 		};
 	}
 	
+	
 	@Test(dataProvider = "getPatientRegData")
 	public void patientRegTest(String firstName, String lastName, String phoneNumber, String address, String floor, String city, String state, String zipcode)
 	{
