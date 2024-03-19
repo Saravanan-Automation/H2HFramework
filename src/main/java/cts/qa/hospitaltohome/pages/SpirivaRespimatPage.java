@@ -82,7 +82,6 @@ public class SpirivaRespimatPage {
 		eleUtil.doClick(enrollPatientBtn);
 		
 	
-		
 		String successMesg = eleUtil.waitForVisibilityOfElement(successMessg, Constants.MEDIUM_DEFAULT_WAIT).getText();
 		System.out.println(successMesg);
 	      
