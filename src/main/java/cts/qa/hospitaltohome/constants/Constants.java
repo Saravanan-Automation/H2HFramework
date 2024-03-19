@@ -27,7 +27,7 @@ public class Constants {
 	
 	public static final String PATIENT_REGISTER_SUCCESS_MESSG = "THANK YOU";
 	
-	public static final String REGISTER_DATA_SHEET_NAME = "register";
+	public static final String PATIENT_REGISTER_DATA_SHEET_NAME = "SpirivaData";
 	public static final String PRODUCT_DATA_SHEET_NAME = "product";
 
 }
