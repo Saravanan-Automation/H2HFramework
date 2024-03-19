@@ -63,6 +63,7 @@ public class StioltoRespimatPageTest extends BaseTest {
 			{"Velan", "Raj", "9043980764", "11euwhfoike", "7", "Bangalore", "karnataka", "89383"},
 			{"Kapoor", "Khan", "8543980764", "add123", "9", "Hyderabad", "AP", "39383"},
 		};
+		
 	}
 	
 	
