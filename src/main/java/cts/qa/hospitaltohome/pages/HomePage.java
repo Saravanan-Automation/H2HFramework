@@ -25,12 +25,12 @@ public class HomePage {
 	private By spirivacard = By.xpath("(//a[contains(@class,'gds-link gds-link--visibility-both')])[3]");
 	private By biCookiesBtn = By.xpath("(//button[text()='Accept All Cookies'])[1]");
 	
-	
+	//STIOLTO
 	private By stioltoprescribinginfolink = By.xpath("(//a[@disclaimer='0'])[3]");
 	private By stioltopatientinfolink = By.xpath("(//a[@disclaimer='0']/following-sibling::a)[2]");
 	private By stioltoinstructionofuselink = By.xpath("(//a[@disclaimer='0']/following-sibling::a)[3]");
 	
-	
+	//SPIRIVA
 	private By spirivaprescribinginfolink = By.xpath("(//h5[contains(@class,'isi_small_txt h2h-isi-text')]//a)[1]");
 	private By spirivainstructionuselink = By.xpath("//a[@title='SPIRIVA RESPIMAT']/following-sibling::a[1]");
 	private By spirivahandihalerinfolink = By.xpath("(//a[text()='SPIRIVA RESPIMAT']/following-sibling::a)[2]");
@@ -142,25 +142,8 @@ public class HomePage {
 	
 	
 	
-	
-//	@Step("PDF")
-//	public PDFLinks navigateToPDF()
-//	{
-//		JavascriptExecutor js = (JavascriptExecutor) driver;
-//		js.executeScript("window.scrollBy(0,3000)");
-//		
-//		eleUtil.waitForVisibilityOfElement(prescribinginfolink, Constants.MEDIUM_DEFAULT_WAIT).click();
-//		
-//		try {
-//			Thread.sleep(3000);
-//		} catch (InterruptedException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		
-//		return new PDFLinks(driver);
-//	}
-	
+
+	//STIOLTO
 	@Step("Stiolto Prescribing info link")
 	public String getStioltoPrescrbinginfoLink()
 	{
@@ -205,6 +188,7 @@ public class HomePage {
 	}
 	
 	
+	//SPIRIVA
 	@Step("Spiriva prescribing info link")
 	public String getSpirivaPrescribingInfoLink()
 	{
