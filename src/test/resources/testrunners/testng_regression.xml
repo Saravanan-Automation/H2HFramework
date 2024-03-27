@@ -4,20 +4,20 @@
 <suite name="Hospital to Home Regression Suite" thread-count="4"
 	parallel="tests" verbose="4">
 	
-	<!-- <listeners>
-			<listener class-name="cts.qa.hospitaltohome.listeners.ExtentReportListener" />
-			<listener class-name="cts.qa.hospitaltohome.listeners.TestAllureListener" />
-			 <listener class-name="cts.qa.hospitaltohome.listeners.AnnotationTransformer" /> 
+	 <listeners>
+		<!--	<listener class-name="cts.qa.hospitaltohome.listeners.ExtentReportListener" /> -->
+			<!--<listener class-name="cts.qa.hospitaltohome.listeners.TestAllureListener" />  -->
+			<!-- <listener class-name="cts.qa.hospitaltohome.listeners.AnnotationTransformer" />  -->
 	</listeners> 
 
-	<test name="Home Page Test">
+	 <test name="Home Page Test">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="cts.qa.hospitaltohome.tests.HomePageTest" />
-		</classes>
-	</test>
+		</classes> 
+	</test> 
 	
-    <test name="Spiriva Respimat Page Test">
+   <!-- <test name="Spiriva Respimat Page Test">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="cts.qa.hospitaltohome.tests.SpirivaRespimatPageTest" />
@@ -25,18 +25,25 @@
 	</test> -->
 
 	
-	<test name="Stiolto Respimat Page Test">
+	<!--<test name="Stiolto Respimat Page Test">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="cts.qa.hospitaltohome.tests.SpirivaRespimatPageTest" />
 		</classes>
 	</test>
 	
-	<!-- <test name="Register Page Test">
+	 <test name="Register Page Test">
 		<classes>
 			<class name="com.qa.opencart.tests.RegisterPageTest" />
 		</classes>
 	</test> -->
+
+	<!-- <test name="PDF link Test">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="cts.qa.hospitaltohome.tests.PDFLinkTest" />
+		</classes> 
+	</test>  -->
 
 
 </suite>	

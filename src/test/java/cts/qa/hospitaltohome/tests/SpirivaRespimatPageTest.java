@@ -65,6 +65,7 @@ public class SpirivaRespimatPageTest extends BaseTest {
 //	}
 	
 	
+	
 	@DataProvider
 	public Object[][] getPatientRegExcelData() 
 	{

@@ -7,6 +7,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 //import org.testng.asserts.SoftAssert;
+import org.testng.asserts.SoftAssert;
 
 import cts.qa.hospitaltohome.factory.DriverFactory;
 import cts.qa.hospitaltohome.pages.HomePage;
@@ -26,6 +27,7 @@ public class BaseTest {
 	protected HomePage homepage;
 	protected StioltoRespimatPage stiltoPage;
 	protected SpirivaRespimatPage spirivaPage;
+	
 //	protected ProductInfoPage productInfoPage;
 //	protected RegisterPage registerPage;
 	
