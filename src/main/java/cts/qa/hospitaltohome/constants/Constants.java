@@ -7,6 +7,8 @@ public class Constants {
 		
 	public static final String PROFESSIONAL_BUTTON = "I am a healthcare professional in the US";
 	
+	public static final String HOME_PAGE_URL = "https://nginx-bihospital2home-com-develop.bi3.bi-oneweb.com/us/hospital2home/";
+	
 	public static final String HOME_PAGE_TITLE = "Enroll Your Patients with COPD | Hospital to Home";
 	public static final String STIOLTO_PAGE_TITLE = "H2H Enrollment Form | Stiolto® Respimat® Inhalation Spray";
 	public static final String SPIRIVA_PAGE_TITLE = "H2H Enrollment Form | Spiriva® Respimat® Inhalation Spray";
@@ -35,6 +37,11 @@ public class Constants {
 	public static final String SPIRIVA_HANDIHALER_INSTRUCTIONS_FOR_USE_PDF = "https://content.boehringer-ingelheim.com/DAM/7e63d875-6ffb-407d-a561-af1e012045e5/spiriva%20handihaler-us-pi.pdf#page=15";
 	
 
+	//Footer Links
+	public static final String CONTACT_US_LINK = "https://pro.boehringer-ingelheim.com/us/bi-druginforequest/";
+	public static final String PRIVACY_NOTICE_PDF = "https://docs.boehringer-ingelheim.com/Privacy%20Statements/BIPI%20Online%20Privacy%20Policy.htm";	
+	public static final String TERMS_OF_USE_PDF = "https://docs.boehringer-ingelheim.com/Terms%20and%20Conditions/Website%20Terms%20and%20Conditions";		
+	
 	public static final int SHORT_DEFAULT_WAIT = 5;
 	public static final int MEDIUM_DEFAULT_WAIT = 10;
 	public static final int LONG_DEFAULT_WAIT = 20;

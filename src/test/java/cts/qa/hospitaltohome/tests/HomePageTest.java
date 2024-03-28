@@ -36,12 +36,12 @@ public class HomePageTest extends BaseTest {
 		Assert.assertEquals(homepage.getHomePageURL(), Constants.HOME_PAGE_URL_FRACTION);
 	}
 	
-	@Description("Verifying BI logo exist test...")
+	@Description("Verifying Header BI logo exist test...")
 	@Severity(SeverityLevel.CRITICAL)
 	@Test (priority = 2)
-	public void logoExistTest()
+	public void headerBILogoExist()
 	{
-		Assert.assertTrue(homepage.isLogoExist());
+		Assert.assertTrue(homepage.isHeaderBILogoExist());
 	}
 	
 	@Description("Verifying Rate This Site Button exist test...")
@@ -61,12 +61,12 @@ public class HomePageTest extends BaseTest {
 	}
 	
 	
-	@Description("BI page url test")
+	@Description("Header BI logo page url test")
 	@Severity(SeverityLevel.BLOCKER)
 	@Test (priority = 5)
-	public void biPageURLTest()
+	public void headerBILogoPageURLTest()
 	{
-		Assert.assertEquals(homepage.getBIPageURL(), Constants.BI_PAGE_URL_FRACTION);
+		Assert.assertEquals(homepage.getHeaderBILogoPageURL(), Constants.BI_PAGE_URL_FRACTION);
 		
 	}
 	
@@ -79,7 +79,7 @@ public class HomePageTest extends BaseTest {
 	}
 	
 	
-	
+	//STIOLTO
 	@Description("Stiolto Prescribing info link Test")
 	@Severity(SeverityLevel.BLOCKER)
 	@Test (priority = 7)
@@ -105,6 +105,7 @@ public class HomePageTest extends BaseTest {
 	}
 	
 	
+	//SPIRIVA
 	@Description("Spiriva prescribing info link Test")
 	@Severity(SeverityLevel.BLOCKER)
 	@Test (priority = 10)
@@ -150,6 +151,53 @@ public class HomePageTest extends BaseTest {
 	public void getSpirivaHandihalerInstructionForUseLinkTest()
 	{
 		Assert.assertEquals(homepage.getSpirivaHandihalerInstructionForUseLink(), Constants.SPIRIVA_HANDIHALER_INSTRUCTIONS_FOR_USE_PDF);
+	}
+	
+	
+	//FOOTER LINKS
+	@Description("Verifying Footer BI logo exist test...")
+	@Severity(SeverityLevel.CRITICAL)
+	@Test (priority = 15)
+	public void footerBILogoExist()
+	{
+		Assert.assertTrue(homepage.isFooterBILogoExist());
+	}
+	
+	
+	@Description("Footer BI logo page url test")
+	@Severity(SeverityLevel.BLOCKER)
+	@Test (priority = 16)
+	public void footerBILogoPageURLTest()
+	{
+		Assert.assertEquals(homepage.getFooterBILogoPageURL(), Constants.BI_PAGE_URL_FRACTION);
+		
+	}
+	
+	
+	@Description("Contact us link Test")
+	@Severity(SeverityLevel.BLOCKER)
+	@Test (priority = 17)
+	public void getContactUsLinkTest()
+	{
+		Assert.assertEquals(homepage.getContactUsLink(), Constants.CONTACT_US_LINK);
+	}
+	
+	
+	@Description("Privacy Notice link Test")
+	@Severity(SeverityLevel.BLOCKER)
+	@Test (priority = 18)
+	public void getPrivacyNoticeLinkTest()
+	{
+		Assert.assertEquals(homepage.getPrivacyNoticeLink(), Constants.PRIVACY_NOTICE_PDF);
+	}
+	
+	
+	@Description("Terms of use link Test")
+	@Severity(SeverityLevel.BLOCKER)
+	@Test (priority = 29)
+	public void getTermsOfUseLinkTest()
+	{
+		Assert.assertEquals(homepage.getTermsOfUseLink(), Constants.TERMS_OF_USE_PDF);
 	}
 	
 	
