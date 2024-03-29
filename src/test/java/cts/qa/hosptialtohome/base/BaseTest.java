@@ -7,12 +7,15 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 //import org.testng.asserts.SoftAssert;
-import org.testng.asserts.SoftAssert;
+
 
 import cts.qa.hospitaltohome.factory.DriverFactory;
+import cts.qa.hospitaltohome.pages.FAQPage;
 import cts.qa.hospitaltohome.pages.HomePage;
+import cts.qa.hospitaltohome.pages.ISISpirivaPage;
 import cts.qa.hospitaltohome.pages.SpirivaRespimatPage;
 import cts.qa.hospitaltohome.pages.StioltoRespimatPage;
+import cts.qa.hospitaltohome.pages.ISIStioltoPage;
 
 //import com.qa.opencart.pages.LoginPage;
 //import com.qa.opencart.pages.ProductInfoPage;
@@ -24,9 +27,15 @@ public class BaseTest {
 	protected WebDriver driver;
 	protected Properties prop;
 	DriverFactory df;
-	protected HomePage homepage;
+	protected HomePage homePage;
+	
+	protected ISIStioltoPage isistioltoPage;
+	protected ISISpirivaPage isispirivaPage;
+	
 	protected StioltoRespimatPage stiltoPage;
 	protected SpirivaRespimatPage spirivaPage;
+	
+	protected FAQPage faqPage;
 	
 //	protected ProductInfoPage productInfoPage;
 //	protected RegisterPage registerPage;
@@ -49,7 +58,7 @@ public class BaseTest {
 		}
 		
 		driver = df.initDriver(prop);
-		homepage = new HomePage(driver);
+		homePage = new HomePage(driver);
 //		softAssert = new SoftAssert();
 		
 	}

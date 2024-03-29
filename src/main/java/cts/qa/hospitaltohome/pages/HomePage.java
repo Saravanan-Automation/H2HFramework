@@ -1,8 +1,10 @@
 package cts.qa.hospitaltohome.pages;
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+
 
 import cts.qa.hospitaltohome.constants.Constants;
 
@@ -14,9 +16,10 @@ public class HomePage {
 	private WebDriver driver;
 	private ElementUtil eleUtil;
 	
+	
 	//By locators: OR
 	private By professionalbtn = By.xpath("//span[@data-gds-release-version='6']");
-	private By cookiesBtn = By.xpath("//button[text()='Accept']");
+	//private By cookiesBtn = By.xpath("//button[text()='Accept']");
 	
 	private By headerbilogo = By.xpath("(//img[@alt='Boehringer Ingelheim Logo'])[2]");
 	private By ratethissiteBtn = By.xpath("(//button[@class='gds-btn gds-btn--contrast'])[2]");
@@ -24,17 +27,23 @@ public class HomePage {
 	private By spirivacard = By.xpath("(//a[contains(@class,'gds-link gds-link--visibility-both')])[3]");
 	private By biCookiesBtn = By.xpath("(//button[text()='Accept All Cookies'])[1]");
 	
-	//STIOLTO
-	private By stioltoprescribinginfolink = By.xpath("(//a[@disclaimer='0'])[3]");
-	private By stioltopatientinfolink = By.xpath("(//a[@disclaimer='0']/following-sibling::a)[2]");
-	private By stioltoinstructionofuselink = By.xpath("(//a[@disclaimer='0']/following-sibling::a)[3]");
+	private By impsafetyinfo = By.xpath("(//span[@class='label'])[2]");
+	private By stioltoisi = By.xpath("//a[@title='ISI | Stiolto® Respimat® Inhalation Spray | Hospital to Home']");
+	private By spirivaisi = By.xpath("//a[@title='ISI | Spiriva® Respimat® Inhalation Spray | Hospital to Home']");
 	
-	//SPIRIVA
-	private By spirivaprescribinginfolink = By.xpath("(//h5[contains(@class,'isi_small_txt h2h-isi-text')]//a)[1]");
-	private By spirivainstructionuselink = By.xpath("//a[@title='SPIRIVA RESPIMAT']/following-sibling::a[1]");
-	private By spirivahandihalerinfolink = By.xpath("(//a[text()='SPIRIVA RESPIMAT']/following-sibling::a)[2]");
-	private By spirivahandihalerpatientinfolink = By.xpath("(//a[@class='skip-disclaimer']/following-sibling::a)[3]");
-	private By spirivahandihalerinstructionuselink = By.xpath("(//a[@disclaimer='0']/following-sibling::a)[1]");
+	private By prescribinginfo = By.xpath("(//span[@class='label'])[3]");
+	private By stioltoinfo = By.xpath("//a[@title='Prescribing Information | Stiolto® Respimat® Inhalation Spray ']");
+	private By spirivainfo = By.xpath("//a[@title='Prescribing Information | Spiriva® Respimat® Inhalation Spray ']");
+	
+	private By producthcpwebsite = By.xpath("//span[text()[normalize-space()='Product HCP Website']]");
+	private By stioltoproduct = By.xpath("//a[@title='Stiolto Respimat']");
+	private By spirivaproduct = By.xpath("//a[@title='Spiriva Respimat']");
+	
+	private By faqlink = By.xpath("//a[@title='Frequently Asked Questions | FAQ | Hospital to Home']");
+	
+	
+	
+	
 	
 	
 	//Footer links
@@ -149,122 +158,111 @@ public class HomePage {
 	}
 	
 	
+	//Nav Links
+	@Step("ISI Stiolto Page")
+	public ISIStioltoPage navigateToStioltoISIPage()
+	{
+		
+		eleUtil.doClick(impsafetyinfo);
+		
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		eleUtil.waitForVisibilityOfElement(stioltoisi, Constants.MEDIUM_DEFAULT_WAIT).click();
+		
+		return new ISIStioltoPage(driver);
+	}
 	
-
-	//STIOLTO
-	@Step("Stiolto Prescribing info link")
-	public String getStioltoPrescrbinginfoLink()
+	
+	
+	@Step("ISI Spiriva Page")
+	public ISISpirivaPage navigateToSpirivaISIPage()
+	{
+		eleUtil.doClick(impsafetyinfo);
+		
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		eleUtil.waitForVisibilityOfElement(spirivaisi, Constants.MEDIUM_DEFAULT_WAIT).click();
+		
+		return new ISISpirivaPage(driver);
+	}
+	
+	
+	@Step("Stiolto Prescribing Info Page")
+	public String getStioltoPrescribingInfoPageURL()
 	{
 		driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,5000)");
-		eleUtil.waitForVisibilityOfElement(stioltoprescribinginfolink, Constants.MEDIUM_DEFAULT_WAIT).click();
+		eleUtil.doClick(prescribinginfo);
+		eleUtil.waitForVisibilityOfElement(stioltoinfo, Constants.MEDIUM_DEFAULT_WAIT).click();
 		driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
 		String url = eleUtil.waitForURLContains(Constants.STIOLTO_PRESCRIBING_INFO_PDF, Constants.MEDIUM_DEFAULT_WAIT);
-		System.out.println("Stiolto Prescribing info link:" +url);
-		driver.close();
-	
-		return url;
-	}
-	
-	
-	@Step("Stiolto Patient info link")
-	public String getStioltoPatientinfoLink()
-	{
-		driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
-		eleUtil.waitForVisibilityOfElement(stioltopatientinfolink, Constants.MEDIUM_DEFAULT_WAIT).click();
-		driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
-		String url = eleUtil.waitForURLContains(Constants.STIOLTO_PATIENT_INFO_PDF, Constants.MEDIUM_DEFAULT_WAIT);
-		System.out.println("Stiolto Patient info link:" +url);
-		driver.close();
-		
-		
-		return url;
-	}
-	
-	@Step("Stiolto Instructions of use link")
-	public String getStioltoInstructionsOfUseLink()
-	{
-		
-		driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
-		eleUtil.waitForVisibilityOfElement(stioltoinstructionofuselink, Constants.MEDIUM_DEFAULT_WAIT).click();
-		driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
-		String url = eleUtil.waitForURLContains(Constants.STIOLTO_INSTRUCTIONS_FOR_USE_PDF, Constants.MEDIUM_DEFAULT_WAIT);
-		System.out.println("Stiolto Instructions of use link:" +url);
+		System.out.println("Stiolto Prescribing Info Page link:" +url);
 		driver.close();
 		return url;
 	}
 	
-	
-	//SPIRIVA
-	@Step("Spiriva prescribing info link")
-	public String getSpirivaPrescribingInfoLink()
+	@Step("Spiriva Prescribing Info Page")
+	public String getSpirivaPrescribingInfoPageURL()
 	{
-		
 		driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
-		eleUtil.waitForVisibilityOfElement(spirivaprescribinginfolink, Constants.MEDIUM_DEFAULT_WAIT).click();
+		eleUtil.waitForVisibilityOfElement(spirivainfo, Constants.MEDIUM_DEFAULT_WAIT).click();
 		driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
 		String url = eleUtil.waitForURLContains(Constants.SPIRIVA_PRESCRIBING_INFO_PDF, Constants.MEDIUM_DEFAULT_WAIT);
-		System.out.println("Spiriva prescribing info link:" +url);
+		System.out.println("Spiriva Prescribing Info Page link:" +url);
+		driver.close();
+		return url;
+	}
+		
+	
+	@Step("Stiolto Product HCP Page")
+	public String getStioltoProductPageURL()
+	{
+		driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
+		eleUtil.doClick(producthcpwebsite);
+		eleUtil.waitForVisibilityOfElement(stioltoproduct, Constants.MEDIUM_DEFAULT_WAIT).click();
+		driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
+		String url = eleUtil.waitForURLContains(Constants.STIOLTO_PRODUCT_HCP_URL, Constants.MEDIUM_DEFAULT_WAIT);
+		System.out.println("Stiolto Product HCP Page link:" +url);
 		driver.close();
 		return url;
 	}
 	
 	
-	@Step("Spiriva Instructions for use link")
-	public String getSpirivaInstructionsforUseLink()
+	@Step("Spiriva Product HCP Page")
+	public String getSpirivaProductPageURL()
+	{
+		driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
+		eleUtil.waitForVisibilityOfElement(spirivaproduct, Constants.MEDIUM_DEFAULT_WAIT).click();
+		driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
+		String url = eleUtil.waitForURLContains(Constants.SPIRIVA_PRODUCT_HCP_URL, Constants.MEDIUM_DEFAULT_WAIT);
+		System.out.println("Spiriva Product HCP Page link:" +url);
+		driver.close();
+		return url;
+	}
+	
+	
+	
+	@Step("FAQs Page")
+	public FAQPage navigateToFAQPage()
 	{
 		
-		driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
-		eleUtil.waitForVisibilityOfElement(spirivainstructionuselink, Constants.MEDIUM_DEFAULT_WAIT).click();
-		driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
-		String url = eleUtil.waitForURLContains(Constants.SPIRIVA_INSTRUCTIONS_FOR_USE_PDF, Constants.MEDIUM_DEFAULT_WAIT);
-		System.out.println("Spiriva Instructions for use link:" +url);
-		driver.close();
-		return url;
-	}
-	
-	
-	@Step("Spiriva Handihaler Info link")
-	public String getSpirivaHandihalerInfoLink()
-	{
+		eleUtil.waitForVisibilityOfElement(faqlink, Constants.MEDIUM_DEFAULT_WAIT).click();
 		
-		driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
-		eleUtil.waitForVisibilityOfElement(spirivahandihalerinfolink, Constants.MEDIUM_DEFAULT_WAIT).click();
-		driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
-		String url = eleUtil.waitForURLContains(Constants.SPIRIVA_HANDIHALER_INFO_PDF, Constants.MEDIUM_DEFAULT_WAIT);
-		System.out.println("Spiriva Handihaler Info link:" +url);
-		driver.close();
-		return url;
+		return new FAQPage(driver);
 	}
 	
 	
-	@Step("Spiriva Handihaler Patient Info link")
-	public String getSpirivaHandihalerPatientInfoLink()
-	{
-		
-		driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
-		eleUtil.waitForVisibilityOfElement(spirivahandihalerpatientinfolink, Constants.MEDIUM_DEFAULT_WAIT).click();
-		driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
-		String url = eleUtil.waitForURLContains(Constants.SPIRIVA_HANDIHALER_PATIENT_INFO_PDF, Constants.MEDIUM_DEFAULT_WAIT);
-		System.out.println("Spiriva Handihaler Patient Info link:" +url);
-		driver.close();
-		return url;
-	}
 	
 	
-	@Step("Spiriva Handihaler Instructions for use link")
-	public String getSpirivaHandihalerInstructionForUseLink()
-	{
-		
-		driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
-		eleUtil.waitForVisibilityOfElement(spirivahandihalerinstructionuselink, Constants.MEDIUM_DEFAULT_WAIT).click();
-		driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
-		String url = eleUtil.waitForURLContains(Constants.SPIRIVA_HANDIHALER_INSTRUCTIONS_FOR_USE_PDF, Constants.MEDIUM_DEFAULT_WAIT);
-		System.out.println("Spiriva Handihaler Instructions for use link:" +url);
-		driver.close();
-		return url;
-	}
 	
 	
 	
@@ -274,7 +272,7 @@ public class HomePage {
 	{
 		driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,2000)");
+		js.executeScript("window.scrollBy(0,8000)");
 		return eleUtil.waitForVisibilityOfElement(footerbilogo, Constants.MEDIUM_DEFAULT_WAIT).isDisplayed();
 	}
 	
@@ -306,12 +304,34 @@ public class HomePage {
 		return url;
 		
 	}
+	
+	
+	@Step("Footer Homepage link")
+	public String getFooterHomeLink()
+	{
+		driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
+		eleUtil.waitForVisibilityOfElement(footerhomelink, Constants.MEDIUM_DEFAULT_WAIT).click();
+//		try {
+//			Thread.sleep(2000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
+		String url = eleUtil.waitForURLContains(Constants.HOME_PAGE_URL_FRACTION, Constants.MEDIUM_DEFAULT_WAIT);
+		System.out.println("Footer Homepage link:" +url);
+	
+		return url;
+	}
+	
 		
 	
 	@Step("Contact us link")
 	public String getContactUsLink()
 	{
 		driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,9000)");
 		eleUtil.waitForVisibilityOfElement(contactuslink, Constants.MEDIUM_DEFAULT_WAIT).click();
 		driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
 		String url = eleUtil.waitForURLContains(Constants.CONTACT_US_LINK, Constants.MEDIUM_DEFAULT_WAIT);

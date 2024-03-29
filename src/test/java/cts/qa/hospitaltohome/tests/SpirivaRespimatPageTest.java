@@ -17,8 +17,8 @@ public class SpirivaRespimatPageTest extends BaseTest {
 	@BeforeClass
 	public void spirivaSetUp()
 	{
-		homepage.getHomepage();
-		spirivaPage = homepage.navigateToSpirivaRespimatPage();
+		homePage.getHomepage();
+		spirivaPage = homePage.navigateToSpirivaRespimatPage();
 	}
 	
 	

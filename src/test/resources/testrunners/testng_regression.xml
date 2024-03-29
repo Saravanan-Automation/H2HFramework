@@ -10,12 +10,12 @@
 			<!-- <listener class-name="cts.qa.hospitaltohome.listeners.AnnotationTransformer" />  -->
 	</listeners> 
 
-	 <test name="Home Page Test">
+	<!-- <test name="Home Page Test">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="cts.qa.hospitaltohome.tests.HomePageTest" />
 		</classes> 
-	</test> 
+	</test> -->
 	
    <!-- <test name="Spiriva Respimat Page Test">
 		<parameter name="browser" value="chrome"></parameter>
@@ -44,6 +44,30 @@
 			<class name="cts.qa.hospitaltohome.tests.PDFLinkTest" />
 		</classes> 
 	</test>  -->
+
+	
+	<!-- <test name="ISI Stiolto Page Test">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="cts.qa.hospitaltohome.tests.ISIStioltoPageTest" />
+		</classes> 
+	</test>  -->
+
+	
+	<!-- <test name="ISI Spiriva Page Test">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="cts.qa.hospitaltohome.tests.ISISpirivaPageTest" />
+		</classes> 
+	</test>  -->
+
+
+	 <test name="FAQs Page Test">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="cts.qa.hospitaltohome.tests.FAQPageTest" />
+		</classes> 
+	</test>  
 
 
 </suite>	

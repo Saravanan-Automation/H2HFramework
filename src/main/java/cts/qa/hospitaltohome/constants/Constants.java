@@ -14,12 +14,22 @@ public class Constants {
 	public static final String SPIRIVA_PAGE_TITLE = "H2H Enrollment Form | Spiriva® Respimat® Inhalation Spray";
 	public static final String BI_PAGE_TITLE = "Boehringer Ingelheim - Life Forward";
 	
+	public static final String FAQ_PAGE_TITLE = "Frequently Asked Questions | FAQ | Hospital to Home";
 	
 	public static final String HOME_PAGE_URL_FRACTION = "https://develop:bi!marketing@nginx-bihospital2home-com-develop.bi3.bi-oneweb.com/us/hospital2home/";
 	public static final String STIOLTO_PAGE_URL_FRACTION = "https://develop:bi!marketing@nginx-bihospital2home-com-develop.bi3.bi-oneweb.com/us/hospital2home/stiolto-respimat-enrollment";
 	public static final String SPIRIVA_PAGE_URL_FRACTION = "https://develop:bi!marketing@nginx-bihospital2home-com-develop.bi3.bi-oneweb.com/us/hospital2home/spiriva-respimat-enrollment";
 	public static final String BI_PAGE_URL_FRACTION = "https://www.boehringer-ingelheim.com/us";
 	
+	public static final String FAQ_PAGE_URL_FRACTION = "https://develop:bi!marketing@nginx-bihospital2home-com-develop.bi3.bi-oneweb.com/us/hospital2home/faqs";
+	
+	public static final String STIOLTO_PRODUCT_HCP_URL = "https://pro.boehringer-ingelheim.com/us/products/stiolto/";
+	public static final String SPIRIVA_PRODUCT_HCP_URL = "https://pro.boehringer-ingelheim.com/us/products/spiriva/";
+	
+	
+	
+	public static final String STIOLTO_ISI_URL_FRACTION = "https://nginx-bihospital2home-com-develop.bi3.bi-oneweb.com/us/hospital2home/isi-1";
+	public static final String SPIRIVA_ISI_URL_FRACTION = "https://nginx-bihospital2home-com-develop.bi3.bi-oneweb.com/us/hospital2home/isi-2";
 	
 	//PDF LINKS
 	

@@ -17,8 +17,8 @@ public class StioltoRespimatPageTest extends BaseTest {
 	@BeforeClass
 	public void stioltoSetUp()
 	{
-		homepage.getHomepage();
-		stiltoPage = homepage.navigateToStioltoRespimatPage();
+		homePage.getHomepage();
+		stiltoPage = homePage.navigateToStioltoRespimatPage();
 	}
 	
 	
