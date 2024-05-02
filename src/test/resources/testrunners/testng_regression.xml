@@ -10,12 +10,12 @@
 			<!-- <listener class-name="cts.qa.hospitaltohome.listeners.AnnotationTransformer" />  -->
 	</listeners> 
 
-	<!-- <test name="Home Page Test">
+	<test name="Home Page Test">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="cts.qa.hospitaltohome.tests.HomePageTest" />
 		</classes> 
-	</test> -->
+	</test> 
 	
    <!-- <test name="Spiriva Respimat Page Test">
 		<parameter name="browser" value="chrome"></parameter>
@@ -25,25 +25,12 @@
 	</test> -->
 
 	
-	<!--<test name="Stiolto Respimat Page Test">
+	<!-- <test name="Stiolto Respimat Page Test">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="cts.qa.hospitaltohome.tests.SpirivaRespimatPageTest" />
+			<class name="cts.qa.hospitaltohome.tests.StioltoRespimatPageTest" />
 		</classes>
-	</test>
-	
-	 <test name="Register Page Test">
-		<classes>
-			<class name="com.qa.opencart.tests.RegisterPageTest" />
-		</classes>
-	</test> -->
-
-	<!-- <test name="PDF link Test">
-		<parameter name="browser" value="chrome"></parameter>
-		<classes>
-			<class name="cts.qa.hospitaltohome.tests.PDFLinkTest" />
-		</classes> 
-	</test>  -->
+	</test> --> 
 
 	
 	<!-- <test name="ISI Stiolto Page Test">
@@ -59,15 +46,15 @@
 		<classes>
 			<class name="cts.qa.hospitaltohome.tests.ISISpirivaPageTest" />
 		</classes> 
-	</test>  -->
+	</test> -->
 
 
-	 <test name="FAQs Page Test">
+	<!-- <test name="FAQs Page Test">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="cts.qa.hospitaltohome.tests.FAQPageTest" />
 		</classes> 
-	</test>  
+	</test>  -->
 
 
 </suite>	

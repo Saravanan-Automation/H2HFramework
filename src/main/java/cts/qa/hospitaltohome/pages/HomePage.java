@@ -122,23 +122,25 @@ public class HomePage {
 	public String getHeaderBILogoPageURL()
 	{
 //		try {
-//			Thread.sleep(1000);
+//			Thread.sleep(2000);
 //		} catch (InterruptedException e) {
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
 		eleUtil.doClick(headerbilogo);
 //		try {
-//			Thread.sleep(1000);
+//			Thread.sleep(2000);
 //		} catch (InterruptedException e) {
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
 		
 		driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
-		
+		//eleUtil.doClick(cookiesBtn);
 		String url = eleUtil.waitForURLContains(Constants.BI_PAGE_URL_FRACTION, Constants.MEDIUM_DEFAULT_WAIT);
 		System.out.println("Header BI Logo page url:" +url);
+		
+		//driver.close();
 		
 		return url;
 		
@@ -150,6 +152,14 @@ public class HomePage {
 		driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
 		String title = eleUtil.waitForTitleIs(Constants.BI_PAGE_TITLE, Constants.MEDIUM_DEFAULT_WAIT);
 		System.out.println("BI page title:" +title);
+		
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		eleUtil.waitForVisibilityOfElement(biCookiesBtn, Constants.MEDIUM_DEFAULT_WAIT).click();
 		
 	
