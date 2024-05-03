@@ -6,16 +6,16 @@
 	
 	 <listeners>
 		<!--	<listener class-name="cts.qa.hospitaltohome.listeners.ExtentReportListener" /> -->
-			<!--<listener class-name="cts.qa.hospitaltohome.listeners.TestAllureListener" />  -->
-			<!-- <listener class-name="cts.qa.hospitaltohome.listeners.AnnotationTransformer" />  -->
+			<listener class-name="cts.qa.hospitaltohome.listeners.TestAllureListener" />  
+			<!-- <listener class-name="cts.qa.hospitaltohome.listeners.AnnotationTransformer" /> -->
 	</listeners> 
 
-	<test name="Home Page Test">
+	 <test name="Home Page Test">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="cts.qa.hospitaltohome.tests.HomePageTest" />
 		</classes> 
-	</test> 
+	</test>
 	
    <!-- <test name="Spiriva Respimat Page Test">
 		<parameter name="browser" value="chrome"></parameter>
@@ -38,15 +38,15 @@
 		<classes>
 			<class name="cts.qa.hospitaltohome.tests.ISIStioltoPageTest" />
 		</classes> 
-	</test>  -->
+	</test> 
 
 	
-	<!-- <test name="ISI Spiriva Page Test">
-		<parameter name="browser" value="chrome"></parameter>
+	 <test name="ISI Spiriva Page Test">
+		<parameter name="browser" value="edge"></parameter>
 		<classes>
 			<class name="cts.qa.hospitaltohome.tests.ISISpirivaPageTest" />
 		</classes> 
-	</test> -->
+	</test>  -->
 
 
 	<!-- <test name="FAQs Page Test">

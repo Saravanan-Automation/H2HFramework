@@ -12,7 +12,7 @@ public class Constants {
 	public static final String HOME_PAGE_TITLE = "Enroll Your Patients with COPD | Hospital to Home";
 	public static final String STIOLTO_PAGE_TITLE = "H2H Enrollment Form | Stiolto® Respimat® Inhalation Spray";
 	public static final String SPIRIVA_PAGE_TITLE = "H2H Enrollment Form | Spiriva® Respimat® Inhalation Spray";
-	public static final String BI_PAGE_TITLE = "Boehringer Ingelheim - Life Forward";
+	public static final String BI_PAGE_TITLE = "Boehringer Ingelheim - Life Forward123";
 	
 	public static final String FAQ_PAGE_TITLE = "Frequently Asked Questions | FAQ | Hospital to Home";
 	
@@ -50,7 +50,7 @@ public class Constants {
 	//Footer Links
 	public static final String CONTACT_US_LINK = "https://pro.boehringer-ingelheim.com/us/bi-druginforequest/";
 	public static final String PRIVACY_NOTICE_PDF = "https://docs.boehringer-ingelheim.com/Privacy%20Statements/BIPI%20Online%20Privacy%20Policy.htm";	
-	public static final String TERMS_OF_USE_PDF = "https://docs.boehringer-ingelheim.com/Terms%20and%20Conditions/Website%20Terms%20and%20Conditions";		
+	public static final String TERMS_OF_USE_PDF = "https://docs.boehringer-ingelheim.com/Terms%20and%20Conditions/Website%20Terms%20and%20Conditions123";		
 	
 	public static final int SHORT_DEFAULT_WAIT = 5;
 	public static final int MEDIUM_DEFAULT_WAIT = 10;
@@ -63,10 +63,7 @@ public class Constants {
 	public static final String PATIENT_REGISTER_SUCCESS_MESSG = "THANK YOU";
 	
 	public static final String PATIENT_REGISTER_DATA_SHEET_NAME = "SpirivaData";
-	public static final String PRODUCT_DATA_SHEET_NAME = "product";
 	
 	
-	public static final List<String> ACCOUNT_PAGE_HEADER_LIST =
-			Arrays.asList("My Account", "My Orders", "My Affiliate Account", "Newsletter");
 
 }

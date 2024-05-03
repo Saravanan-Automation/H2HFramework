@@ -17,10 +17,6 @@ import cts.qa.hospitaltohome.pages.SpirivaRespimatPage;
 import cts.qa.hospitaltohome.pages.StioltoRespimatPage;
 import cts.qa.hospitaltohome.pages.ISIStioltoPage;
 
-//import com.qa.opencart.pages.LoginPage;
-//import com.qa.opencart.pages.ProductInfoPage;
-//import com.qa.opencart.pages.RegisterPage;
-//import com.qa.opencart.pages.SerachResultsPage;
 
 public class BaseTest {
 	
@@ -36,10 +32,6 @@ public class BaseTest {
 	protected SpirivaRespimatPage spirivaPage;
 	
 	protected FAQPage faqPage;
-	
-//	protected ProductInfoPage productInfoPage;
-//	protected RegisterPage registerPage;
-	
 	
 	
 //	protected SoftAssert softAssert;

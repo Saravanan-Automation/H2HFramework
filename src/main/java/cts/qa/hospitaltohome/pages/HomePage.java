@@ -41,10 +41,7 @@ public class HomePage {
 	
 	private By faqlink = By.xpath("//a[@title='Frequently Asked Questions | FAQ | Hospital to Home']");
 	
-	
-	
-	
-	
+
 	
 	//Footer links
 	private By footerbilogo = By.xpath("//footer[@id='block-h2hfooter']/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]/div[1]/picture[1]/img[1]");
