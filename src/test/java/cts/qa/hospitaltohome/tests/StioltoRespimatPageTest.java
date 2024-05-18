@@ -49,8 +49,8 @@ public class StioltoRespimatPageTest extends BaseTest {
 	
 	public String getRandomEmailID()
 	{
-		return "testautomation" + System.currentTimeMillis() + "@opencart.com";
-	  //return "testautomation" + UUID.randomUUID() + "@opencart.com";
+		return "automationtest" + System.currentTimeMillis() + "@gmail.com";
+	  //return "automationtest" + UUID.randomUUID() + "@gmail.com";
 	}
 	
 	

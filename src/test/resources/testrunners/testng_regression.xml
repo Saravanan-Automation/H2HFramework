@@ -10,19 +10,19 @@
 			<!-- <listener class-name="cts.qa.hospitaltohome.listeners.AnnotationTransformer" /> -->
 	</listeners> 
 
-	 <test name="Home Page Test">
+	<!-- <test name="Home Page Test">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="cts.qa.hospitaltohome.tests.HomePageTest" />
 		</classes> 
-	</test>
+	</test> -->
 	
-   <!-- <test name="Spiriva Respimat Page Test">
+    <test name="Spiriva Respimat Page Test">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="cts.qa.hospitaltohome.tests.SpirivaRespimatPageTest" />
 		</classes>
-	</test> -->
+	</test> 
 
 	
 	<!-- <test name="Stiolto Respimat Page Test">
@@ -30,7 +30,7 @@
 		<classes>
 			<class name="cts.qa.hospitaltohome.tests.StioltoRespimatPageTest" />
 		</classes>
-	</test> --> 
+	</test> -->
 
 	
 	<!-- <test name="ISI Stiolto Page Test">
